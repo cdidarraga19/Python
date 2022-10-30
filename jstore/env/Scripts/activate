@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\APRENDIZ.BOGAPRCSFFSD268\Documents\python\jstore\env"
+VIRTUAL_ENV="C:\GitHub\Python\jstore\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
