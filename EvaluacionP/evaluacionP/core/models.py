@@ -3,8 +3,8 @@ from django.db import models
 # Modelo equipo
 class Team(models.Model):
     name = models.CharField(max_length=50, verbose_name="Nombre")
-    flag = models.ImageField(verbose_name="Bandera del equipo") #upload_to=None, height_field=None, width_field=None, max_lenght=100)
-    team_crest = models.ImageField(verbose_name="Escudo del equipo")
+    flag = models.ImageField(upload_to=None, height_field=None, width_field=None, verbose_name="Bandera del equipo") 
+    team_crest = models.ImageField(upload_to=None, height_field=None, width_field=None, verbose_name="Escudo del equipo")
 
     def __str__(self):
         return self.name
@@ -40,7 +40,7 @@ HEADLINE_CHOICES = (
 class Player(models.Model):
     name = models.CharField(max_length=50, verbose_name="Nombre")
     lastname = models.CharField(max_length=50, verbose_name="Apellido")
-    photo = models.ImageField(verbose_name="Foto del jugador")
+    photo = models.ImageField(upload_to=None, height_field=None, width_field=None,  verbose_name="Foto del jugador")
     date_of_birth = models.DateField(verbose_name="Fecha de nacimiento")
     position = models.ForeignKey(GamePosition, on_delete=models.CASCADE, verbose_name='Posición de juego')
     shirt_number = models.PositiveIntegerField(verbose_name="Número")
